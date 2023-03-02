@@ -1,0 +1,45 @@
+*{
+  box-sizing: border-box;
+
+}
+body{
+  margin: 0;
+}
+
+ul li{
+  display: inline-block;
+  list-style: none;
+  width: 60px;
+  position: relative;
+  background-color: aqua;
+  color: blueviolet;
+  transition: all 1s ease;
+}
+li::after{
+  content: '';
+  height: 5px;
+  width: 0;
+  display: block;
+  position: absolute;
+  background-color: orange;
+  transition: all 1s linear;
+}
+
+li::before{
+  content: '';
+  height: 5px;
+  width: 100%;
+  display: block;
+  position: absolute;
+  background-color: orange;
+  transition: all 1s linear;
+
+}
+
+li:hover::after{
+  width: 100%;
+}
+
+li:hover::before{
+  width: 0%;
+}
